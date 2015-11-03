@@ -50,7 +50,7 @@ if ((userAnswerOne === answerOne)||(userAnswerOne === 'y')||(userAnswerOne === '
     alert("That's incorrect. It's like you don't even know me.");
   }
 
-  var userAnswerFour = prompt("How old I am?");
+  var userAnswerFour = prompt("How old am I?");
     if(userAnswerFour === answerFour){
       alert('You chose ' + userAnswerFour + ', good choice!');
       alert("That's correct! A quarter of a century, how time flies.");
