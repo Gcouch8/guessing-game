@@ -3,7 +3,7 @@ var answerTwo= "no";
 var answerThree = "yes";
 var answerFour= "25";
 var answerFive= 'yes';
-var answerSix='2';
+
 
 alert("Please answer yes or no. Except for question Four and Six.");
 
@@ -81,7 +81,7 @@ if ((userAnswerOne === answerOne)||(userAnswerOne === 'y')||(userAnswerOne === '
 
 
 
-  alert("You got " + counter +"/6 correct!");
+  alert("You got " + counter +"/5 correct!");
 
   if (counter >= 4){
     alert("You know me so well, let's be best friends!");
