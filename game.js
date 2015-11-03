@@ -3,6 +3,7 @@ var answerTwo= "no";
 var answerThree = "yes";
 var answerFour= "25";
 var answerFive= 'yes';
+var answerSix='2';
 
 
 alert("Please answer yes or no. Except for question Four and Six.");
@@ -71,17 +72,33 @@ if ((userAnswerOne === answerOne)||(userAnswerOne === 'y')||(userAnswerOne === '
     var userAnswerFive = prompt('Do I have two dogs?');
       if((userAnswerFive===answerFive)||(userAnswerFive==='y')||(userAnswerFive==='Y')||(userAnswerFive==='YES')){
         alert('You chose ' + userAnswerFive + ', good choice!');
-        alert('Two big dogs! Boomer and Jax.');
+        alert("That's correct! Two big dogs! Boomer and Jax.");
         counter++;
       }
       else{
         alert('You chose ' + userAnswerFive +', poor decision.');
-        alert("Couldn't live without my best buds!");
+        alert(" That's incorrect. Couldn't live without my best buds!");
+      }
+
+    var userAnswerSix = prompt('How many cats do I have?');
+      if(userAnswerSix === answerSix){
+        alert('You chose ' + userAnswerSix + ', good choice!');
+        alert("That's correct! Baggins and Chirp.");
+        counter++;
+      }
+      else if(userAnswerSix > answerSix){
+        alert("You chose " + userAnswerSix + ", poor decision.");
+        alert("That's incorrect. I'm not a crazy cat person, at least I hope not.");
+
+      }
+
+      else{
+        alert('You chose ' + userAnswerSix + ', poor decision.');
+        alert("That's incorrect. I've got more than that!");
       }
 
 
-
-  alert("You got " + counter +"/5 correct!");
+  alert("You got " + counter +"/6 correct!");
 
   if (counter >= 4){
     alert("You know me so well, let's be best friends!");
