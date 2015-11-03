@@ -2,8 +2,10 @@ var answerOne = "yes";
 var answerTwo= "no";
 var answerThree = "yes";
 var answerFour= "25";
+var answerFive= 'yes';
+var answerSix='2';
 
-alert("Please answer yes or no. Except for question four.");
+alert("Please answer yes or no. Except for question Four and Six.");
 
 var counter = 0;
 
@@ -66,14 +68,26 @@ if ((userAnswerOne === answerOne)||(userAnswerOne === 'y')||(userAnswerOne === '
       alert("That's incorrect. I'm flattered, but I'm not that young.");
     }
 
+    var userAnswerFive = prompt('Do I have two dogs?');
+      if((userAnswerFive===answerFive)||(userAnswerFive==='y')||(userAnswerFive==='Y')||(userAnswerFive==='YES')){
+        alert('You chose ' + userAnswerFive + ', good choice!');
+        alert('Two big dogs! Boomer and Jax.');
+        counter++;
+      }
+      else{
+        alert('You chose ' + userAnswerFive +', poor decision.');
+        alert("Couldn't live without my best buds!");
+      }
 
-  alert("You got " + counter +"/4 correct!");
 
-  if (counter >= 3){
+
+  alert("You got " + counter +"/6 correct!");
+
+  if (counter >= 4){
     alert("You know me so well, let's be best friends!");
   }
 
-  if (counter <=2){
+  if (counter <=3){
     alert("It's okay, I probably don't know much about you either");
   }
 
