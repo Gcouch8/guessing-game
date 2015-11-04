@@ -1,9 +1,9 @@
 var answerOne = "yes";
 var answerTwo= "no";
 var answerThree = "yes";
-var answerFour= "25";
+var answerFour= 25;
 var answerFive= 'yes';
-var answerSix='2';
+var answerSix=2;
 
 
 alert("Please answer yes or no. Except for question Four and Six.");
@@ -50,7 +50,7 @@ if ((userAnswerOne === answerOne)||(userAnswerOne === 'y')||(userAnswerOne === '
     alert("That's incorrect. It's like you don't even know me.");
   }
 
-  var userAnswerFour = prompt("How old am I?");
+  var userAnswerFour = Number(prompt("How old am I?"));
     if(userAnswerFour === answerFour){
       alert('You chose ' + userAnswerFour + ', good choice!');
       alert("That's correct! A quarter of a century, how time flies.");
@@ -80,7 +80,7 @@ if ((userAnswerOne === answerOne)||(userAnswerOne === 'y')||(userAnswerOne === '
         alert(" That's incorrect. Couldn't live without my best buds!");
       }
 
-    var userAnswerSix = prompt('How many cats do I have?');
+    var userAnswerSix = Number(prompt('How many cats do I have?'));
       if(userAnswerSix === answerSix){
         alert('You chose ' + userAnswerSix + ', good choice!');
         alert("That's correct! Baggins and Chirp.");
