@@ -12,89 +12,89 @@ var counter = 0;
 
 var userAnswerOne = prompt("Did I grow up in Minnesota?");
 
-if ((userAnswerOne === answerOne)||(userAnswerOne === 'y')||(userAnswerOne === 'Y')||(userAnswerOne ==='YES')){
-  alert("You chose " + userAnswerOne + ", good choice!" );
-  alert("That's correct! Have you been following me?");
+if ((userAnswerOne === answerOne)||(userAnswerOne === 'y')||(userAnswerOne === 'Y')||(userAnswerOne ==='YES')||(userAnswerOne==='Yes')){
+  document.getElementById('aOne').innerHTML = ("You chose " + userAnswerOne + ", good choice!" );
+  document.getElementById('rOne').innerHTML = ("That's correct! Have you been following me?");
   counter++;
 }
   else{
-    alert('You chose ' + userAnswerOne + ', poor decision.');
-    alert("That's incorrect. Oh yah, you betcha! I grew up in Minnesota.");
+    document.getElementById('aOne').innerHTML = ('You chose ' + userAnswerOne + ', poor decision.');
+    document.getElementById('rOne').innerHTML = ("That's incorrect. Oh yah, you betcha! I grew up in Minnesota.");
   }
 
   var userAnswerTwo = prompt("Was I member of the US Olympic Curling team?");
 
   if ((userAnswerTwo === answerTwo)||(userAnswerTwo === 'n')||(userAnswerTwo === 'N')||(userAnswerTwo === 'NO')){
-    alert("You chose " + userAnswerTwo + ", good choice!");
-    alert("That's correct, sadly I didn't make the team.");
+    document.getElementById('aTwo').innerHTML = ("You chose " + userAnswerTwo + ", good choice!");
+    document.getElementById('rTwo').innerHTML = ("That's correct, sadly I didn't make the team.");
     counter++;
 
   }
 
   else{
-    alert('You chose ' + userAnswerTwo + ', poor decision.');
-    alert("That's incorrect, and they would've won gold that year with me.");
+    document.getElementById('aTwo').innerHTML=('You chose ' + userAnswerTwo + ', poor decision.');
+    document.getElementById('rTwo').innerHTML=("That's incorrect, and they would've won gold that year with me.");
 
   }
 
   var userAnswerThree = prompt('Have I been volcano boarding?');
 
   if ((userAnswerThree === answerThree)||(userAnswerThree === 'y')||(userAnswerThree === 'Y')||(userAnswerThree === 'YES')){
-    alert('You chose ' + userAnswerThree + ', good choice!');
-    alert("That's correct! Twice, and the volcano is active!");
+    document.getElementById('aThree').innerHTML=('You chose ' + userAnswerThree + ', good choice!');
+    document.getElementById('rThree').innerHTML=("That's correct! Twice, and the volcano is active!");
     counter++;
   }
 
   else {
-    alert('You chose, ' + userAnswerThree + ', poor decision.');
-    alert("That's incorrect. It's like you don't even know me.");
+    document.getElementById('aThree').innerHTML=('You chose, ' + userAnswerThree + ', poor decision.');
+    document.getElementById('rThree').innerHTML=("That's incorrect. It's like you don't even know me.");
   }
 
   var userAnswerFour = Number(prompt("How old am I?"));
     if(userAnswerFour === answerFour){
-      alert('You chose ' + userAnswerFour + ', good choice!');
-      alert("That's correct! A quarter of a century, how time flies.");
+      document.getElementById('aFour').innerHTML=('You chose ' + userAnswerFour + ', good choice!');
+      document.getElementById('rFour').innerHTML=("That's correct! A quarter of a century, how time flies.");
       counter++;
 
     }
 
     else if(userAnswerFour > answerFour){
-      alert('You chose ' + userAnswerFour + ', poor decision.');
-      alert("That's incorrect. Do you really think I am that old?!!");
+      document.getElementById('aFour').innerHTML=('You chose ' + userAnswerFour + ', poor decision.');
+      document.getElementById('rFour').innerHTML=("That's incorrect. Do you really think I am that old?!!");
 
     }
 
     else{
-      alert('You chose ' + userAnswerFour + ', poor decision.');
-      alert("That's incorrect. I'm flattered, but I'm not that young.");
+      document.getElementById('aFour').innerHTML=('You chose ' + userAnswerFour + ', poor decision.');
+      document.getElementById('rFour').innerHTML=("That's incorrect. I'm flattered, but I'm not that young.");
     }
 
     var userAnswerFive = prompt('Do I have two dogs?');
       if((userAnswerFive===answerFive)||(userAnswerFive==='y')||(userAnswerFive==='Y')||(userAnswerFive==='YES')){
-        alert('You chose ' + userAnswerFive + ', good choice!');
-        alert("That's correct! Two big dogs! Boomer and Jax.");
+        document.getElementById('aFive').innerHTML=('You chose ' + userAnswerFive + ', good choice!');
+        document.getElementById('rFive').innerHTML=("That's correct! Two big dogs! Boomer and Jax.");
         counter++;
       }
       else{
-        alert('You chose ' + userAnswerFive +', poor decision.');
-        alert(" That's incorrect. Couldn't live without my best buds!");
+        document.getElementById('aFive').innerHTML=('You chose ' + userAnswerFive +', poor decision.');
+        document.getElementById('rFive').innerHTML=("That's incorrect. Couldn't live without my best buds!");
       }
 
     var userAnswerSix = Number(prompt('How many cats do I have?'));
       if(userAnswerSix === answerSix){
-        alert('You chose ' + userAnswerSix + ', good choice!');
-        alert("That's correct! Baggins and Chirp.");
+        document.getElementById('aSix').innerHTML=('You chose ' + userAnswerSix + ', good choice!');
+        document.getElementById('rSix').innerHTML=("That's correct! Baggins and Chirp.");
         counter++;
       }
       else if(userAnswerSix > answerSix){
-        alert("You chose " + userAnswerSix + ", poor decision.");
-        alert("That's incorrect. I'm not a crazy cat person, at least I hope not.");
+        document.getElementById('aSix').innerHTML=("You chose " + userAnswerSix + ", poor decision.");
+        document.getElementById('rSix').innerHTML=("That's incorrect. I'm not a crazy cat person, at least I hope not.");
 
       }
 
       else{
-        alert('You chose ' + userAnswerSix + ', poor decision.');
-        alert("That's incorrect. I've got more than that!");
+        document.getElementById('aSix').innerHTML=('You chose ' + userAnswerSix + ', poor decision.');
+        document.getElementById('rSix').innerHTML=("That's incorrect. I've got more than that!");
       }
 
 
