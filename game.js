@@ -97,8 +97,7 @@ if ((userAnswerOne === answerOne)||(userAnswerOne === 'y')||(userAnswerOne === '
         document.getElementById('rSix').innerHTML=("That's incorrect. I've got more than that!");
       }
 
-
-  alert("You got " + counter +"/6 correct!");
+        alert("You got " + counter +"/6 correct!");
 
   if (counter >= 4){
     alert("You know me so well, let's be best friends!");
