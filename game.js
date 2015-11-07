@@ -26,6 +26,7 @@ var userAnswerOne = prompt("Did I grow up in Minnesota?");
 if ((userAnswerOne === answerOne)||(userAnswerOne === 'y')||(userAnswerOne === 'Y')||(userAnswerOne ==='YES')||(userAnswerOne==='Yes')){
   document.getElementById('aOne').innerHTML = ("You chose " + userAnswerOne + ", good choice!" );
   document.getElementById('rOne').innerHTML = ("That's correct! Have you been following me?");
+  document.getElementById('imageOne').src ='http://www.findlocalbanks.com/images/states/minnesota.gif';
   counter++;
 }
   else{
@@ -39,6 +40,7 @@ if ((userAnswerOne === answerOne)||(userAnswerOne === 'y')||(userAnswerOne === '
   if ((userAnswerTwo === answerTwo)||(userAnswerTwo === 'n')||(userAnswerTwo === 'N')||(userAnswerTwo === 'NO')){
     document.getElementById('aTwo').innerHTML = ("You chose " + userAnswerTwo + ", good choice!");
     document.getElementById('rTwo').innerHTML = ("That's correct, sadly I didn't make the team.");
+    document.getElementById('imageTwo').src='http://i.huffpost.com/gen/1621418/images/n-JEREMY-ABBOTT-large570.jpg';
     counter++;
   }
 
@@ -53,6 +55,7 @@ if ((userAnswerOne === answerOne)||(userAnswerOne === 'y')||(userAnswerOne === '
   if ((userAnswerThree === answerThree)||(userAnswerThree === 'y')||(userAnswerThree === 'Y')||(userAnswerThree === 'YES')){
     document.getElementById('aThree').innerHTML=('You chose ' + userAnswerThree + ', good choice!');
     document.getElementById('rThree').innerHTML=("That's correct! Twice, and the volcano is active!");
+    document.getElementById('imageThree').src='http://www.gsu.edu/wp-content/uploads/2013/11/Volcano-erupting-600x300.jpg';
     counter++;
   }
 
@@ -68,6 +71,7 @@ if ((userAnswerOne === answerOne)||(userAnswerOne === 'y')||(userAnswerOne === '
     if(userAnswerFour === answerFour){
       document.getElementById('aFour').innerHTML=('You chose ' + userAnswerFour + ', good choice!');
       document.getElementById('rFour').innerHTML=("That's correct! A quarter of a century, how time flies.");
+      document.getElementById('imageFour').src='http://images.mentalfloss.com/sites/default/files/styles/article_640x430/public/happy-25th.jpg';
       counter++;
     }
 
@@ -87,6 +91,7 @@ if ((userAnswerOne === answerOne)||(userAnswerOne === 'y')||(userAnswerOne === '
       if((userAnswerFive===answerFive)||(userAnswerFive==='y')||(userAnswerFive==='Y')||(userAnswerFive==='YES')){
         document.getElementById('aFive').innerHTML=('You chose ' + userAnswerFive + ', good choice!');
         document.getElementById('rFive').innerHTML=("That's correct! Two big dogs! Boomer and Jax.");
+        document.getElementById('imageFive').src='http://labsarefamily.com/wp-content/uploads/2015/07/lab5.jpg';
         counter++;
       }
       else{
@@ -101,6 +106,7 @@ if ((userAnswerOne === answerOne)||(userAnswerOne === 'y')||(userAnswerOne === '
       if(userAnswerSix === answerSix){
         document.getElementById('aSix').innerHTML=('You chose ' + userAnswerSix + ', good choice!');
         document.getElementById('rSix').innerHTML=("That's correct! Baggins and Chirp.");
+        document.getElementById('imageSix').src='http://images.mentalfloss.com/sites/default/files/styles/article_640x430/public/700salvador_dali_nywts.jpg';
         counter++;
       }
 
