@@ -10,18 +10,13 @@ var counter = 0;
 
 
 //A greeting script to direct user input.
-alert("Please answer yes or no. Except for question Four and Six.");
+document.getElementById('clickClack').onclick=questions;
 
 //calling the functions
-questionOne();
-questionTwo();
-questionThree();
-questionFour();
-questionFive();
-questionSix();
+questions();
 
 //The questions!!
-function questionOne(){
+function questions(){
 var userAnswerOne = prompt("Did I grow up in Minnesota?");
 if ((userAnswerOne === answerOne)||(userAnswerOne === 'y')||(userAnswerOne === 'Y')||(userAnswerOne ==='YES')||(userAnswerOne==='Yes')){
   document.getElementById('aOne').innerHTML = ("You chose " + userAnswerOne + ", good choice!" );
@@ -33,9 +28,9 @@ if ((userAnswerOne === answerOne)||(userAnswerOne === 'y')||(userAnswerOne === '
     document.getElementById('aOne').innerHTML = ('You chose ' + userAnswerOne + ', poor decision.');
     document.getElementById('rOne').innerHTML = ("That's incorrect. Oh yah, you betcha! I grew up in Minnesota.");
   }
- };
 
- function questionTwo(){
+
+
   var userAnswerTwo = prompt("Was I member of the US Olympic Curling team?");
   if ((userAnswerTwo === answerTwo)||(userAnswerTwo === 'n')||(userAnswerTwo === 'N')||(userAnswerTwo === 'NO')){
     document.getElementById('aTwo').innerHTML = ("You chose " + userAnswerTwo + ", good choice!");
@@ -48,9 +43,9 @@ if ((userAnswerOne === answerOne)||(userAnswerOne === 'y')||(userAnswerOne === '
     document.getElementById('aTwo').innerHTML=('You chose ' + userAnswerTwo + ', poor decision.');
     document.getElementById('rTwo').innerHTML=("That's incorrect, and they would've won gold that year with me.");
   }
-};
 
-  function questionThree(){
+
+
   var userAnswerThree = prompt('Have I been volcano boarding?');
   if ((userAnswerThree === answerThree)||(userAnswerThree === 'y')||(userAnswerThree === 'Y')||(userAnswerThree === 'YES')){
     document.getElementById('aThree').innerHTML=('You chose ' + userAnswerThree + ', good choice!');
@@ -63,10 +58,10 @@ if ((userAnswerOne === answerOne)||(userAnswerOne === 'y')||(userAnswerOne === '
     document.getElementById('aThree').innerHTML=('You chose, ' + userAnswerThree + ', poor decision.');
     document.getElementById('rThree').innerHTML=("That's incorrect. It's like you don't even know me.");
   }
-};
 
 
-  function questionFour(){
+
+
   var userAnswerFour = Number(prompt("How old am I?"));
     if(userAnswerFour === answerFour){
       document.getElementById('aFour').innerHTML=('You chose ' + userAnswerFour + ', good choice!');
@@ -84,9 +79,9 @@ if ((userAnswerOne === answerOne)||(userAnswerOne === 'y')||(userAnswerOne === '
       document.getElementById('aFour').innerHTML=('You chose ' + userAnswerFour + ', poor decision.');
       document.getElementById('rFour').innerHTML=("That's incorrect. I'm flattered, but I'm not that young.");
     }
-  };
 
-    function questionFive(){
+
+
     var userAnswerFive = prompt('Do I have two dogs?');
       if((userAnswerFive===answerFive)||(userAnswerFive==='y')||(userAnswerFive==='Y')||(userAnswerFive==='YES')){
         document.getElementById('aFive').innerHTML=('You chose ' + userAnswerFive + ', good choice!');
@@ -98,10 +93,10 @@ if ((userAnswerOne === answerOne)||(userAnswerOne === 'y')||(userAnswerOne === '
         document.getElementById('aFive').innerHTML=('You chose ' + userAnswerFive +', poor decision.');
         document.getElementById('rFive').innerHTML=("That's incorrect. Couldn't live without my best buds!");
       }
-    };
 
 
-    function questionSix(){
+
+
     var userAnswerSix = Number(prompt('How many cats do I have?'));
       if(userAnswerSix === answerSix){
         document.getElementById('aSix').innerHTML=('You chose ' + userAnswerSix + ', good choice!');
@@ -119,7 +114,6 @@ if ((userAnswerOne === answerOne)||(userAnswerOne === 'y')||(userAnswerOne === '
         document.getElementById('aSix').innerHTML=('You chose ' + userAnswerSix + ', poor decision.');
         document.getElementById('rSix').innerHTML=("That's incorrect. I've got more than that!");
       }
-    };
 
 //An alert to let the user know the number of correct questions
   alert("You got " + counter +"/6 correct!");
@@ -132,6 +126,12 @@ if ((userAnswerOne === answerOne)||(userAnswerOne === 'y')||(userAnswerOne === '
   if (counter <=3){
     alert("It's okay, I probably don't know much about you either");
   }
+
+
+
+    };
+
+
 
 
 
