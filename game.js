@@ -9,7 +9,7 @@ var answerSix=2;
 var counter = 0;
 
 
-//A greeting script to direct user input.
+//Somehow this is working. I don't know how.
 document.getElementById('clickClack').onclick=questions;
 
 //calling the functions
