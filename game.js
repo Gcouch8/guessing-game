@@ -16,8 +16,7 @@ start.addEventListener('click', function(event){
   questions();
 });
 
-//calling the functions
-//questions();
+
 
 //The questions!!
 function questions(){
@@ -35,8 +34,6 @@ function questions(){
     document.getElementById('rOne').innerHTML = ("That's incorrect. Oh yah, you betcha! I grew up in Minnesota.");
   }
 
-
-
   var userAnswerTwo = prompt("Was I member of the US Olympic Curling team?");
   if ((userAnswerTwo === answerTwo)||(userAnswerTwo === 'n')||(userAnswerTwo === 'N')||(userAnswerTwo === 'NO')){
     document.getElementById('aTwo').innerHTML = ("You chose " + userAnswerTwo + ", good choice!");
@@ -50,8 +47,6 @@ function questions(){
     document.getElementById('rTwo').innerHTML=("That's incorrect, and they would've won gold that year with me.");
   }
 
-
-
   var userAnswerThree = prompt('Have I been volcano boarding?');
   if ((userAnswerThree === answerThree)||(userAnswerThree === 'y')||(userAnswerThree === 'Y')||(userAnswerThree === 'YES')){
     document.getElementById('aThree').innerHTML=('You chose ' + userAnswerThree + ', good choice!');
@@ -59,14 +54,10 @@ function questions(){
     document.getElementById('imageThree').src='http://www.gsu.edu/wp-content/uploads/2013/11/Volcano-erupting-600x300.jpg';
     counter++;
   }
-
   else {
     document.getElementById('aThree').innerHTML=('You chose, ' + userAnswerThree + ', poor decision.');
     document.getElementById('rThree').innerHTML=("That's incorrect. It's like you don't even know me.");
   }
-
-
-
 
   var userAnswerFour = Number(prompt("How old am I?"));
     if(userAnswerFour === answerFour){
@@ -75,18 +66,14 @@ function questions(){
       document.getElementById('imageFour').src='http://images.mentalfloss.com/sites/default/files/styles/article_640x430/public/happy-25th.jpg';
       counter++;
     }
-
     else if(userAnswerFour > answerFour){
       document.getElementById('aFour').innerHTML=('You chose ' + userAnswerFour + ', poor decision.');
       document.getElementById('rFour').innerHTML=("That's incorrect. Do you really think I am that old?!!");
     }
-
     else{
       document.getElementById('aFour').innerHTML=('You chose ' + userAnswerFour + ', poor decision.');
       document.getElementById('rFour').innerHTML=("That's incorrect. I'm flattered, but I'm not that young.");
     }
-
-
 
     var userAnswerFive = prompt('Do I have two dogs?');
       if((userAnswerFive===answerFive)||(userAnswerFive==='y')||(userAnswerFive==='Y')||(userAnswerFive==='YES')){
@@ -100,9 +87,6 @@ function questions(){
         document.getElementById('rFive').innerHTML=("That's incorrect. Couldn't live without my best buds!");
       }
 
-
-
-
     var userAnswerSix = Number(prompt('How many cats do I have?'));
       if(userAnswerSix === answerSix){
         document.getElementById('aSix').innerHTML=('You chose ' + userAnswerSix + ', good choice!');
@@ -110,12 +94,10 @@ function questions(){
         document.getElementById('imageSix').src='http://images.mentalfloss.com/sites/default/files/styles/article_640x430/public/700salvador_dali_nywts.jpg';
         counter++;
       }
-
       else if(userAnswerSix > answerSix){
         document.getElementById('aSix').innerHTML=("You chose " + userAnswerSix + ", poor decision.");
         document.getElementById('rSix').innerHTML=("That's incorrect. I'm not a crazy cat person, at least I hope not.");
       }
-
       else{
         document.getElementById('aSix').innerHTML=('You chose ' + userAnswerSix + ', poor decision.');
         document.getElementById('rSix').innerHTML=("That's incorrect. I've got more than that!");
@@ -128,14 +110,10 @@ function questions(){
   if (counter >= 4){
     alert("You know me so well, let's be best friends!");
   }
-
   if (counter <=3){
     alert("It's okay, I probably don't know much about you either");
   }
-
-
-
-    };
+};
 
 
 
