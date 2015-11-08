@@ -9,16 +9,21 @@ var answerSix=2;
 var counter = 0;
 
 
-//I have no idea how I got this to work. But somehow it does.
-document.getElementById('clickClack').onclick=questions;
+//Somehow this is working. I don't know how.
+var button = document.getElementById('start');
 
-//calling the function
-questions();
+start.addEventListener('click', function(event){
+  questions();
+});
+
+
 
 //The questions!!
 function questions(){
-var userAnswerOne = prompt("Did I grow up in Minnesota?");
-if ((userAnswerOne === answerOne)||(userAnswerOne === 'y')||(userAnswerOne === 'Y')||(userAnswerOne ==='YES')||(userAnswerOne==='Yes')){
+
+  console.log('This is the beginning of the function');
+  var userAnswerOne = prompt("Did I grow up in Minnesota?");
+  if ((userAnswerOne === answerOne)||(userAnswerOne === 'y')||(userAnswerOne === 'Y')||(userAnswerOne ==='YES')||(userAnswerOne==='Yes')){
   document.getElementById('aOne').innerHTML = ("You chose " + userAnswerOne + ", good choice!" );
   document.getElementById('rOne').innerHTML = ("That's correct! Have you been following me?");
   document.getElementById('imageOne').src ='http://www.findlocalbanks.com/images/states/minnesota.gif';
