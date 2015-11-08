@@ -20,5 +20,10 @@ header{
 
 header p{
   font-family:cursive;
+  font-size:16px;
 }
 
+strong{
+  font-weight: bold;
+  font-size:25px;
+}
