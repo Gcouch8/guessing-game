@@ -24,9 +24,9 @@ function questions(){
   console.log('This is the beginning of the function');
   var userAnswerOne = prompt("Did I grow up in Minnesota?");
   if ((userAnswerOne === answerOne)||(userAnswerOne === 'y')||(userAnswerOne === 'Y')||(userAnswerOne ==='YES')||(userAnswerOne==='Yes')){
+  document.getElementById('imageOne').src ='http://www.findlocalbanks.com/images/states/minnesota.gif';
   document.getElementById('aOne').innerHTML = ("You chose " + userAnswerOne + ", good choice!" );
   document.getElementById('rOne').innerHTML = ("That's correct! Have you been following me?");
-  document.getElementById('imageOne').src ='http://www.findlocalbanks.com/images/states/minnesota.gif';
   counter++;
 }
   else{
@@ -34,11 +34,11 @@ function questions(){
     document.getElementById('rOne').innerHTML = ("That's incorrect. Oh yah, you betcha! I grew up in Minnesota.");
   }
 
-  var userAnswerTwo = prompt("Was I member of the US Olympic Curling team?");
+  var userAnswerTwo = prompt("Was I a member of the US Olympic Curling team?");
   if ((userAnswerTwo === answerTwo)||(userAnswerTwo === 'n')||(userAnswerTwo === 'N')||(userAnswerTwo === 'NO')){
+    document.getElementById('imageTwo').src='http://i.huffpost.com/gen/1621418/images/n-JEREMY-ABBOTT-large570.jpg';
     document.getElementById('aTwo').innerHTML = ("You chose " + userAnswerTwo + ", good choice!");
     document.getElementById('rTwo').innerHTML = ("That's correct, sadly I didn't make the team.");
-    document.getElementById('imageTwo').src='http://i.huffpost.com/gen/1621418/images/n-JEREMY-ABBOTT-large570.jpg';
     counter++;
   }
 
@@ -49,9 +49,9 @@ function questions(){
 
   var userAnswerThree = prompt('Have I been volcano boarding?');
   if ((userAnswerThree === answerThree)||(userAnswerThree === 'y')||(userAnswerThree === 'Y')||(userAnswerThree === 'YES')){
+    document.getElementById('imageThree').src='http://www.gsu.edu/wp-content/uploads/2013/11/Volcano-erupting-600x300.jpg';
     document.getElementById('aThree').innerHTML=('You chose ' + userAnswerThree + ', good choice!');
     document.getElementById('rThree').innerHTML=("That's correct! Twice, and the volcano is active!");
-    document.getElementById('imageThree').src='http://www.gsu.edu/wp-content/uploads/2013/11/Volcano-erupting-600x300.jpg';
     counter++;
   }
   else {
@@ -61,9 +61,9 @@ function questions(){
 
   var userAnswerFour = Number(prompt("How old am I?"));
     if(userAnswerFour === answerFour){
+      document.getElementById('imageFour').src='http://images.mentalfloss.com/sites/default/files/styles/article_640x430/public/happy-25th.jpg';
       document.getElementById('aFour').innerHTML=('You chose ' + userAnswerFour + ', good choice!');
       document.getElementById('rFour').innerHTML=("That's correct! A quarter of a century, how time flies.");
-      document.getElementById('imageFour').src='http://images.mentalfloss.com/sites/default/files/styles/article_640x430/public/happy-25th.jpg';
       counter++;
     }
     else if(userAnswerFour > answerFour){
@@ -77,9 +77,9 @@ function questions(){
 
     var userAnswerFive = prompt('Do I have two dogs?');
       if((userAnswerFive===answerFive)||(userAnswerFive==='y')||(userAnswerFive==='Y')||(userAnswerFive==='YES')){
+        document.getElementById('imageFive').src='http://labsarefamily.com/wp-content/uploads/2015/07/lab5.jpg';
         document.getElementById('aFive').innerHTML=('You chose ' + userAnswerFive + ', good choice!');
         document.getElementById('rFive').innerHTML=("That's correct! Two big dogs! Boomer and Jax.");
-        document.getElementById('imageFive').src='http://labsarefamily.com/wp-content/uploads/2015/07/lab5.jpg';
         counter++;
       }
       else{
