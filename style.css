@@ -1,0 +1,24 @@
+body{
+  background-color: #99C999;
+  margin:0;
+  padding:0;
+}
+button{
+  width:100px;
+  height:25px;
+  position:relative;
+
+}
+
+header{
+  background-color: #8ECED1;
+  margin:auto;
+  font-family:Times;
+  text-align: center;
+  padding:15px;
+}
+
+header p{
+  font-family:cursive;
+}
+
