@@ -28,10 +28,10 @@ var wrongNumber1 = [ "That's incorrect. Do you really think I'm that old?",
 var wrongNumber2 = [ "That's incorrect. I'm not a crazy cat person, at least I hope not.",
                      "That's incorrect. I've got more than that."]
 
-var images =['http://www.findlocalbanks.com/images/states/minnesota.gif',
-            'http://i.huffpost.com/gen/1621418/images/n-JEREMY-ABBOTT-large570.jpg',
-            'http://www.gsu.edu/wp-content/uploads/2013/11/Volcano-erupting-600x300.jpg',
-            'http://images.mentalfloss.com/sites/default/files/styles/article_640x430/public/happy-25th.jpg',
-            'http://labsarefamily.com/wp-content/uploads/2015/07/lab5.jpg',
-            'http://images.mentalfloss.com/sites/default/files/styles/article_640x430/public/700salvador_dali_nywts.jpg'
+var images =['images/minnesota.gif',
+            'images/curling1.jpg',
+            'images/volcano1.jpg',
+            'images/birthday.jpg',
+            'images/dogs.jpg',
+            'images/catstache.jpg'
             ]

@@ -23,7 +23,6 @@ var GuessingGame = function(question, answer, results) {
             if (response == this.answer) {
                element1.innerHTML = this.correct;
                element2.src = this.image;
-               console.log('image should change here');
             } else {
                 element1.innerHTML = this.wrong;
             }
