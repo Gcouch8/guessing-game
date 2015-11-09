@@ -1,5 +1,7 @@
+//  Targets 'begin' button \\
 var button = document.getElementById('start');
 
+// Adds event listener to button \\
 start.addEventListener('click', function(event){
     question1.runGame(document.getElementById('aOne'), document.getElementById('imageOne'));
     question2.runGame(document.getElementById('aTwo'), document.getElementById('imageTwo'));
@@ -10,13 +12,14 @@ start.addEventListener('click', function(event){
 });
 
 
-
+// Ccreates object for the guessing game with the needed data for each question passed in as arguments \\
 var GuessingGame = function(question, answer, results) {
     this.question = question;
     this.answer = answer;
     this.correct = results.correct;
     this.wrong = results.wrong || results.wrongNumberLow || results.wrongNumberHigh;
     this.image = results.image;
+    // Runs the game. I reference the specific elements from the HTML page when calling runGame() \\
     this.runGame = function(element1, element2) {
         var response = prompt(this.question);
         if (this.answer == 'yes' || this.answer == 'no') {
@@ -26,6 +29,7 @@ var GuessingGame = function(question, answer, results) {
             } else {
                 element1.innerHTML = this.wrong;
             }
+        // If the answer is a number \\
         } else {
             if (response < this.answer) {
                 element1.innerHTML = results.wrongNumberLow;
@@ -41,6 +45,7 @@ var GuessingGame = function(question, answer, results) {
     }
 };
 
+// Instances of GuessingGame object \\
 var question1 = new GuessingGame(questions[0], answers[0], {correct: correct[0], wrong: wrong[0], image: images[0]});
 var question2 = new GuessingGame(questions[1], answers[1], {correct: correct[1], wrong: wrong[1], image: images[1]});
 var question3 = new GuessingGame(questions[2], answers[2], {correct: correct[2], wrong: wrong[2], image: images[2]});

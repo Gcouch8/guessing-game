@@ -22,6 +22,8 @@ var wrong = ["That's incorrect. Oh ya you betcha I grew up in Minnesota",
             "That's incorrect. It's like you don't even know me.",
             "That's incorrect. Couldn't live without my best buds.",
            ];
+
+// Stores incorrect responses for questions that require a number as an answer \\
 var wrongNumber1 = [ "That's incorrect. Do you really think I'm that old?",
                      "That's incorrect. I'm flattered, but I'm not that young.",]
 
