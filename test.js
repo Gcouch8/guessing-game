@@ -3,12 +3,12 @@ var button = document.getElementById('start');
 
 
 start.addEventListener('click', function(event){
-    question1.runGame(document.getElementById('aOne'), document.getElementById('img1'));
-    // question2.runGame();
-    // question3.runGame();
-    // question4.runGame();
-    // question5.runGame();
-    // question6.runGame();
+    question1.runGame(document.getElementById('aOne'), document.getElementById('imageOne'));
+    question2.runGame(document.getElementById('aTwo'), document.getElementById('imageTwo'));
+    question3.runGame(document.getElementById('aThree'), document.getElementById('imageThree'));
+    // question4.runGame(document.getElementById('aFour'), document.getElementById('imageFour'));
+    // question5.runGame(document.getElementById('aFive'), document.getElementById('imageFive'));
+    // question6.runGame(document.getElementById('aSix'), document.getElementById('imageSix'));
 });
 
 
@@ -21,12 +21,10 @@ var GuessingGame = function(question, answer, results) {
     this.image = results.image;
     this.runGame = function(element1, element2) {
         var response = prompt(this.question);
-        if (this.answer == 'yes') {
+        if (this.answer == 'yes' || this.answer == 'no') {
             if (response == this.answer) {
                element1.innerHTML = this.correct;
-               var pic = document.createElement('img');
-               pic.src = this.image;
-               element2.appendChild(pic);
+               element2.src = this.image;
             } else {
                 element1.innerHTML = this.wrong;
             }
