@@ -32,36 +32,3 @@ var images =['http://www.findlocalbanks.com/images/states/minnesota.gif',
             'http://labsarefamily.com/wp-content/uploads/2015/07/lab5.jpg',
             'http://images.mentalfloss.com/sites/default/files/styles/article_640x430/public/700salvador_dali_nywts.jpg'
 ]
-
-
-var button = document.getElementById('start');
-
-start.addEventListener('click', function(event){
-  question1.runGame();
-});
-
-// //var answers = ['yes', 'no', 'yes', 25, 'yes', 2];
-// //var userAnswer = prompt(questions[0]);
-// var elTextTwo="You chose, " + userAnswer + ', poor decision.';
-// var elTextOne ="You chose, " + userAnswer + ', good choice!';
-
-// (function(){
-//   function beginGame(question, answer){
-//     for (var i=0; i<questions.length; i++);
-
-
-
-//     if(answer==='yes'){
-//       if(userAnswer==='yes')||(userAnswer==='y')||(userAnswer==='YES')||(userAnswer==='Yes'){
-//         document.getElementById()
-//       }
-//     }
-
-//   }
-
-
-// })();
-
-
-
-
