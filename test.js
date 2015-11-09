@@ -1,32 +1,36 @@
+var button = document.getElementById('start');
+
+
+
+start.addEventListener('click', function(event){
+    question1.runGame(document.getElementById('aOne'), document.getElementById('img1'));
+    // question2.runGame();
+    // question3.runGame();
+    // question4.runGame();
+    // question5.runGame();
+    // question6.runGame();
+});
+
+
+
 var GuessingGame = function(question, answer, results) {
     this.question = question;
     this.answer = answer;
     this.correct = results.correct;
     this.wrong = results.wrong;
     this.image = results.image;
-    this.renderCorrect = function() {
-        var s = document.createElement('img').setAttribute('src', this.image);
-        var p = document.createElement('p');
-        p.innerHTML = this. correct;
-    };
-    this.renderWrong = function() {
-        var s = document.createElement('p');
-        s.innerHTML = this.wrong;
-    };
-    this.runGame = function() {
-        console.log(this.question);
-        var x = prompt(this.question);
-    //     if (this.answer == 'yes') {
-    //         if (this.answer == x){
-    //             this.renderCorrect();
-    //         } else {
-    //             this.renderWrong();
-    //         }
-    //     } else if (typeof(this.answer) == 'number') {
-    //         if (x < this.answer) {
-    //             y = crea
-    //         }
-    //     }
+    this.runGame = function(element1, element2) {
+        var response = prompt(this.question);
+        if (this.answer == 'yes') {
+            if (response == this.answer) {
+               element1.innerHTML = this.correct;
+               var pic = document.createElement('img');
+               pic.src = this.image;
+               element2.appendChild(pic);
+            } else {
+                element1.innerHTML = this.wrong;
+            }
+        }
     }
 };
 
@@ -39,14 +43,4 @@ var question6 = new GuessingGame(questions[5], answers[5], {correct: correct[5],
 
 
 
-var button = document.getElementById('start');
 
-start.addEventListener('click', function(event){
-    question1.runGame();
-    question2.runGame();
-    question3.runGame();
-    question4.runGame();
-    question5.runGame();
-    question6.runGame();
-});
-// question1.runGame();
