@@ -1,10 +1,10 @@
 ====Guessing Game====
 
-Gareth Couch
+Author: Gareth Couch
+Collaborator: Daniel Zwelling
 
 
-This code will start a Guessing-game once opened. There are 6 questions total. The code will alert the user of their input and store their input in a variable. It will then alert the user of whether their input was correct and matched the answer stored in a variable. After the game is over, the code will alert the user of how many questions they got correct.
-
+When the button is clicked, the GuessingGame function constructor will run the runGame function. Which will then access the arrays that have the data for each question, answer, response, and image. Depending on the user input, the output will be displayed either on the page or through alerts. If the user got the question correct they will get a custom response and an image to be displayed. If the user got the question incorrect, a different custom response will be displayed. At the end of the game a counter variable will dispay how many questions the user got correct.
 
 
 A joke for the TAs: "Why did the programmer quit his job? Because they didn't get arrays!"
