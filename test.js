@@ -56,40 +56,49 @@ start.addEventListener('click', function(event){
 
 
 // Ccreates object for the guessing game with the needed data for each question passed in as arguments \\
-var GuessingGame = function(question, answer, results) {
+var GuessingGame = function (question, answer, results) {
+    var counter = 0;
     this.question = question;
-    this.answer = answers;
+    this.answer = answer;
     this.correct = results.correct;
     this.wrong = results.wrong || results.wrongNumberLow || results.wrongNumberHigh;
     this.image = results.image;
     // Runs the game. I reference the specific elements from the HTML page when calling runGame() \\
+
     this.runGame = function(element1, element2) {
         var response = prompt(this.question);
+        response=response.toLowerCase();
         if (this.answer == 'yes' || this.answer == 'no') {
-            if (response.toLowerCase() == this.answer) {
+            if (response == this.answer) {
                element1.innerHTML = this.correct;
                element2.src = this.image;
                finalScore++;
+               counter++;
+
             } else {
                 element1.innerHTML = this.wrong;
+                counter++;
             }
         // If the answer is a number \\
         } else {
             if (response < Number(this.answer)) {
                 element1.innerHTML = results.wrongNumberLow;
+                counter++;
             }
             if (response > Number(this.answer)) {
                 element1.innerHTML = results.wrongNumberHigh;
+                counter++;
             }
             if (response == Number(this.answer)) {
                 element1.innerHTML = this.correct;
                 element2.src = this.image;
                 finalScore++;
+                counter++;
             }
         }
-
     }
-};
+
+       if(counter === 6){
         //An alert to let the user know the number of correct questions
           alert("You got " + finalScore +"/6 correct!");
 
@@ -100,6 +109,8 @@ var GuessingGame = function(question, answer, results) {
           if (finalScore <= 3){
             alert("It's okay, I probably don't know much about you either");
         };
+    };
+};
 
 
 // Instances of GuessingGame object \\
