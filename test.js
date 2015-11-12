@@ -22,12 +22,12 @@ var wrong = ["That's incorrect. Oh ya you betcha I grew up in Minnesota",
             "That's incorrect. Couldn't live without my best buds.",
            ];
 
-// Stores incorrect responses for questions that require a number as an answer \\
+// Stores incorrect responses for questions that require a number as an answer
 var wrongNumber1 = [ "That's incorrect. Do you really think I'm that old?",
                      "That's incorrect. I'm flattered, but I'm not that young.",]
 
-var wrongNumber2 = [ "That's incorrect. I'm not a crazy cat person, at least I hope not.",
-                     "That's incorrect. I've got more than that."]
+var wrongNumber2 = ["That's incorrect. I'm not a crazy cat person, at least I hope not.",
+                    "That's incorrect. I've got more than that."]
 
 var images =['images/minnesota.gif',
             'images/curling1.jpg',
@@ -39,12 +39,12 @@ var images =['images/minnesota.gif',
 
 
 
-//  Targets 'begin' button \\
+//  Targets 'begin' button
 var button = document.getElementById('start');
 
 var finalScore = 0;
 
-// Adds event listener to button \\
+// Adds event listener to button
 start.addEventListener('click', function(event){
     question1.runGame(document.getElementById('aOne'), document.getElementById('imageOne'));
     question2.runGame(document.getElementById('aTwo'), document.getElementById('imageTwo'));
@@ -52,19 +52,19 @@ start.addEventListener('click', function(event){
     question4.runGame(document.getElementById('aFour'), document.getElementById('imageFour'));
     question5.runGame(document.getElementById('aFive'), document.getElementById('imageFive'));
     question6.runGame(document.getElementById('aSix'), document.getElementById('imageSix'));
+    finalResult();
 });
 
-
-// Ccreates object for the guessing game with the needed data for each question passed in as arguments \\
-var GuessingGame = function (question, answer, results) {
     var counter = 0;
+
+// Creates object for the guessing game with the needed data for each question passed in as arguments
+var GuessingGame = function (question, answer, results) {
     this.question = question;
     this.answer = answer;
     this.correct = results.correct;
     this.wrong = results.wrong || results.wrongNumberLow || results.wrongNumberHigh;
     this.image = results.image;
-    // Runs the game. I reference the specific elements from the HTML page when calling runGame() \\
-
+    // Runs the game.
     this.runGame = function(element1, element2) {
         var response = prompt(this.question);
         response=response.toLowerCase();
@@ -79,17 +79,17 @@ var GuessingGame = function (question, answer, results) {
                 element1.innerHTML = this.wrong;
                 counter++;
             }
-        // If the answer is a number \\
+        // If the answer is a number
         } else {
-            if (response < Number(this.answer)) {
+            if (Number(response) < this.answer) {
                 element1.innerHTML = results.wrongNumberLow;
                 counter++;
             }
-            if (response > Number(this.answer)) {
+            if (Number(response) > this.answer) {
                 element1.innerHTML = results.wrongNumberHigh;
                 counter++;
             }
-            if (response == Number(this.answer)) {
+            if (Number(response) == this.answer) {
                 element1.innerHTML = this.correct;
                 element2.src = this.image;
                 finalScore++;
@@ -98,6 +98,9 @@ var GuessingGame = function (question, answer, results) {
         }
     }
 
+    };
+
+function finalResult(){
        if(counter === 6){
         //An alert to let the user know the number of correct questions
           alert("You got " + finalScore +"/6 correct!");
@@ -111,7 +114,6 @@ var GuessingGame = function (question, answer, results) {
         };
     };
 };
-
 
 // Instances of GuessingGame object \\
 var question1 = new GuessingGame(questions[0], answers[0], {correct: correct[0], wrong: wrong[0], image: images[0]});
